@@ -27,20 +27,20 @@ public class Message {
 
     ConnectionFactory factory = new ConnectionFactory();
     public void setupConnetionFactory(){
-//        String uri = "amqp://ehlbpomi:AODIFxJKO0QmTUqke2_FHjy5AKKcQ5ed@wasp.rmq.cloudamqp.com/ehlbpomi";
-        String uri ="localhost";
-        factory.setHost(uri);
-//        try {
-//            factory.setAutomaticRecoveryEnabled(false);
-//            factory.setUri(uri);
-//
-//        } catch (URISyntaxException e) {
-//            e.printStackTrace();
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        } catch (KeyManagementException e) {
-//            e.printStackTrace();
-//        }
+        String uri = "amqp://ehlbpomi:AODIFxJKO0QmTUqke2_FHjy5AKKcQ5ed@wasp.rmq.cloudamqp.com/ehlbpomi";
+//        String uri ="localhost";
+//        factory.setHost(uri);
+        try {
+            factory.setAutomaticRecoveryEnabled(false);
+            factory.setUri(uri);
+
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (KeyManagementException e) {
+            e.printStackTrace();
+        }
     }
 
     Thread subscribeThread;
